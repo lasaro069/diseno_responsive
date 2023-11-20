@@ -49,3 +49,22 @@ p {
 
 
 /** CODIGO AQUI **/
+
+@media (min-width: 768px) {
+    .contenedor-grid{
+        display: grid;
+        grid-template-areas: "izquierda contenido derecha"; /* se definen nombres para las columnas a usar*/
+        grid-template-columns: 1fr 3fr 1fr; /* se define el tamaño de las columnas */
+        grid-auto-flow: column;
+        column-gap: 2rem;
+    }
+
+    .contenedor-principal{
+/*        grid-column: 2/3;   Coloca el aside desde la posición 2 hasta la posición 3*/
+        grid-area: contenido;   /* se asigna el nombre deseado */
+    }
+
+    .sidebar-1{
+        grid-area: izquierda;
+    }
+}
